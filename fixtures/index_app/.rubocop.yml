@@ -1,0 +1,9 @@
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+  pitchd_rubocop:
+    - rubocop.yml
+    - rubocop-pitchd.yml
+    - rubocop-pitchd-index.yml
+
+AllCops:
+  NewCops: disable

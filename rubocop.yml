@@ -1,0 +1,23 @@
+# RuboCop configuration shipped for consuming apps to inherit:
+#
+#   # .rubocop.yml in your app
+#   inherit_gem:
+#     rubocop-rails-omakase: rubocop.yml
+#     pitchd_rubocop: rubocop.yml
+#
+# Order matters — this file is a thin layer over omakase, not a replacement for
+# it. rubocop-rails-omakase is the ruleset source of truth, so this file
+# deliberately does not restate or contradict its cop settings.
+#
+# NewCops is deliberately NOT set here: a shipped config that auto-enables cops
+# would change your lint results whenever *your* RuboCop version bumps, through
+# no change of your own. Whether new cops are pending or enabled is your app's
+# call. (This repo enables them for itself in its own .rubocop.yml, and fixing
+# offences rather than disabling them works whichever way you choose.)
+#
+# Much of linting well is process rather than configuration — zero offences
+# before work is complete, fix in code, never `# rubocop:disable`, never a
+# .rubocop_todo.yml. Config cannot enforce those; the people and agents running
+# RuboCop do. What belongs here is only what is genuinely cop-level.
+AllCops:
+  SuggestExtensions: false
