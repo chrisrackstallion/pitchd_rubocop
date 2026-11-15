@@ -1,0 +1,11 @@
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - "skills/**/*"
+    - "fixtures/**/*"
+    - "vendor/**/*"
